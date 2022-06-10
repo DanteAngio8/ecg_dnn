@@ -1,5 +1,5 @@
 import os
-import cPickle as pickle
+import pickle
 
 def load(dirname):
     preproc_f = os.path.join(dirname, "preproc.bin")
@@ -9,5 +9,5 @@ def load(dirname):
 
 def save(preproc, dirname):
     preproc_f = os.path.join(dirname, "preproc.bin")
-    with open(preproc_f, 'w') as fid:
+    with open(preproc_f, 'wb') as fid:
         pickle.dump(preproc, fid)
