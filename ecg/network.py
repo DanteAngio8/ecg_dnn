@@ -113,7 +113,7 @@ def add_output_layer(layer, **params):
 def add_compile(model, **params):
     from keras.optimizers import Adam
     optimizer = Adam(
-        lr=params["learning_rate"],
+        learning_rate=params["learning_rate"],
         clipnorm=params.get("clipnorm", 1))
 
     model.compile(loss='categorical_crossentropy',
